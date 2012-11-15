@@ -91,6 +91,7 @@ function submitBid(button) {
 	bids[myIndex] = parseInt($('#bidValue').val());
 	var pid = '' + ((myIndex + 1) % n);
 	delta({'statusChanged': 'false', 'currentPlayer': pid, 'bids': JSON.stringify(bids)});
+	$('#bidValue').removeAttr('id');
 }
 
 function stateChange(evt) {
