@@ -86,9 +86,9 @@ function initGame() {
 
 function submitBid(button) {
 	button.disabled = true;
-	$('#bidValue').disabled = true;
+	$('#bidValue').prop('disabled', true);
 	bids = JSON.parse(get('bids'));
-	bids[myIndex] = $('#bidValue').value;
+	bids[myIndex] = parseInt($('#bidValue').val());
 	var pid = '' + ((myIndex + 1) % n);
 	delta({'statusChanged': 'false', 'currentPlayer': pid, 'bids': JSON.stringify(bids)});
 }
