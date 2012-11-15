@@ -19,7 +19,7 @@
 			            }
 			            #player0area {
 			                position: relative;
-			                top: -470px;
+			                top: -570px;
 			            }
 			        </style>
             	</head>
@@ -45,12 +45,12 @@
 			                            <span id="playername2">Player 2</span><br/>
 			                            <img id="p2c0" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
 			                            <img style="position:relative; top: -75px;" id="p2c1" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
-			                            <img style="position:relative; top: -145px;" id="p2c2" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
-			                            <img style="position:relative; top: -215px;" id="p2c3" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
-			                            <img style="position:relative; top: -285px;" id="p2c4" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
-			                            <img style="position:relative; top: -355px;" id="p2c5" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
-			                            <img style="position:relative; top: -425px;" id="p2c6" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
-			                            <img style="position:relative; top: -495px;" id="p2c7" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" />
+			                            <img style="position:relative; top: -105px;" id="p2c2" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
+			                            <img style="position:relative; top: -135px;" id="p2c3" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
+			                            <img style="position:relative; top: -165px;" id="p2c4" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
+			                            <img style="position:relative; top: -195px;" id="p2c5" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
+			                            <img style="position:relative; top: -225px;" id="p2c6" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
+			                            <img style="position:relative; top: -255px;" id="p2c7" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" />
 			                        </span>
 			                    </td>
 			                    <td id="playarea" width="94%">
@@ -62,14 +62,14 @@
 			                    <td id="player3" width="3%">
 			                        <span style="width: 100%; height: 200px; overflow: hidden;">
 			                            <span id="playername3">Player 3</span><br/>
-			                            <img id="p3c0" src="/images/cards/back.png" /><br/>
+			                            <img id="p3c0" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
 			                            <img style="position:relative; top: -75px;" id="p3c1" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
-			                            <img style="position:relative; top: -145px;" id="p3c2" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
-			                            <img style="position:relative; top: -215px;" id="p3c3" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
-			                            <img style="position:relative; top: -285px;" id="p3c4" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
-			                            <img style="position:relative; top: -355px;" id="p3c5" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
-			                            <img style="position:relative; top: -425px;" id="p3c6" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
-			                            <img style="position:relative; top: -495px;" id="p3c7" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" />
+			                            <img style="position:relative; top: -105px;" id="p3c2" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
+			                            <img style="position:relative; top: -135px;" id="p3c3" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
+			                            <img style="position:relative; top: -165px;" id="p3c4" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
+			                            <img style="position:relative; top: -195px;" id="p3c5" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
+			                            <img style="position:relative; top: -225px;" id="p3c6" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
+			                            <img style="position:relative; top: -255px;" id="p3c7" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" />
 			                        </span>
 			                    </td>
 			                </tr>
