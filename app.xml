@@ -19,7 +19,7 @@
 			            }
 			            #player0area {
 			                position: relative;
-			                top: -620px;
+			                top: -670px;
 			            }
 			        </style>
             	</head>
