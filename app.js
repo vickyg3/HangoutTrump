@@ -93,8 +93,8 @@ function stateChange(evt) {
 				var cards = JSON.parse(get('cards'));
 				console.log(cards);
 				for(var i = 0; i < cards[myIndex].length; i++) {
-			        $('p0c' + i).attr('src', '//raw.github.com/vickyg3/HangoutTrump/master/images/cards/' + cards[myIndex][i] + '.png');
-			        $('p0c' + i).attr('data-card', cards[myIndex][i]);
+			        $('#p0c' + i).attr('src', '//raw.github.com/vickyg3/HangoutTrump/master/images/cards/' + cards[myIndex][i] + '.png');
+			        $('#p0c' + i).attr('data-card', cards[myIndex][i]);
 				}
 			}
 			// display the current bids
