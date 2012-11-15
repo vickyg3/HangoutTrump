@@ -1,6 +1,6 @@
 var mySymbol;
 var myIndex;
-var n = 2;
+var n = 1;
 var players;
 
 function stringCompare(a,b) {
@@ -74,24 +74,46 @@ function shuffleAndDeal() {
 }
 
 function initGame() {
-	cards = shuffleAndDeal();
-	delta({'state': 'bid', 'cards': JSON.stringify(cards), 'stateChanged': 'true', 'currentPlayer': '0'});
+	var cards = shuffleAndDeal();
+	var bids = [0, 0, 0, 0];
+	delta({
+			'state': 'bid', 
+			'cards': JSON.stringify(cards), 
+			'bids': JSON.stringify(bids),
+			'stateChanged': 'true', 
+			'currentPlayer': '0'
+			});
 }
 
 function stateChange(evt) {
 	if(get('state') != "false") {
-		if(get('stateChanged') == "true") {
-			// going from false to bid
-			if(get('state') == "bid") {
+		if(get('state') == "bid") {
+			if(get('stateChanged') == "true") {
 				// display the cards
 				var cards = JSON.parse(get('cards'));
 				for(var i = 0; i < players[myIndex].length; i++) {
-			        $('p0c' + i).attr('src', '/images/cards/' + cards[myIndex][i] + '.png');
+			        $('p0c' + i).attr('src', '//raw.github.com/vickyg3/HangoutTrump/master/images/cards/' + cards[myIndex][i] + '.png');
 			        $('p0c' + i).attr('data-card', cards[myIndex][i]);
 				}
 			}
+			// display the current bids
+			bids = JSON.parse(get('bids'));
+			for(var i = 0; i < n; i++) {
+		        $('#playername' + i).html(players[i]['name'] + ' Bid: ' + bids[i]);
+			}
+			// take action based on whose turn
+			pid = parseInt(get('currentPlayer'));
+			if(pid == myIndex) {
+				$('#status').append('<li> It is your turn to bid: </li>');
+				bid = parseInt(prompt('Enter your bid value: '));
+				bids[myIndex] = bid;
+				pid = (pid + 1) % n;
+				pid = '' + pid;
+				delta({'statusChanged': 'false', 'currentPlayer': pid});
+			} else {
+				$('#status').append('<li>Waiting for ' + players[pid]['name'] + ' to bid..</li>');
+			}
 		}
-		
 	}
 }
 
