@@ -43,7 +43,7 @@
 			                    <td id="player2" width="3%">
 			                        <span style="width: 100%; height: 200px; overflow: hidden;">
 			                            <span id="playername2">Player 2</span><br/>
-			                            <img id="p2c0" src="/images/cards/back.png" /><br/>
+			                            <img id="p2c0" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
 			                            <img style="position:relative; top: -75px;" id="p2c1" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
 			                            <img style="position:relative; top: -145px;" id="p2c2" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
 			                            <img style="position:relative; top: -215px;" id="p2c3" src="//raw.github.com/vickyg3/HangoutTrump/master/images/cards/back.png" /><br/>
