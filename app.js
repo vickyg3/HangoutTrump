@@ -22,7 +22,6 @@ function populatePlayers() {
 		players[i] = {'name': participants[i].person.displayName, 'id': participants[i].id};
 	}
 	players.sort(stringCompare);
-	console.log(players);
 	for(var i = 0; i < n; i++) {
 		if(players[i]['id'] == gapi.hangout.getLocalParticipantId()) {
 			myIndex = i;
@@ -100,7 +99,6 @@ function stateChange(evt) {
 			if(get('stateChanged') == "true") {
 				// display the cards
 				var cards = JSON.parse(get('cards'));
-				console.log(cards);
 				for(var i = 0; i < cards[myIndex].length; i++) {
 			        $('#p0c' + i).attr('src', '//raw.github.com/vickyg3/HangoutTrump/master/images/cards/' + cards[myIndex][i] + '.png');
 			        $('#p0c' + i).attr('data-card', cards[myIndex][i]);
@@ -108,6 +106,7 @@ function stateChange(evt) {
 			}
 			// display the current bids
 			bids = JSON.parse(get('bids'));
+			console.log(bids);
 			for(var i = 0; i < n; i++) {
 		        $('#playername' + i).html(players[i]['name'] + ' Bid: ' + bids[i]);
 			}
