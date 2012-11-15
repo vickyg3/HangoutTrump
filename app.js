@@ -1,6 +1,6 @@
 var mySymbol;
 var myIndex;
-var n = 1;
+var n = 2;
 var players;
 
 function stringCompare(a,b) {
@@ -33,7 +33,9 @@ function populatePlayers() {
 }
 
 function initPlayers() {
-	if(gapi.hangout.getEnabledParticipants().length < n) {
+	var currLength = gapi.hangout.getEnabledParticipants().length;
+	if(currLength < n) {
+		$('#status').append('<li>Waiting for ' + (n - currLength) + ' more players..</li>');
 		return;
 	}
 	players = populatePlayers();
