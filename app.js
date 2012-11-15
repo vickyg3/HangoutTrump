@@ -85,6 +85,15 @@ function initGame() {
 			});
 }
 
+function submitBid(button) {
+	button.disabled = true;
+	$('#bidValue').disabled = true;
+	bids = JSON.parse(get('bids'));
+	bids[myIndex] = $('#bidValue').value;
+	var pid = '' + ((myIndex + 1) % n);
+	delta({'statusChanged': 'false', 'currentPlayer': pid, 'bids': JSON.stringify(bids)});
+}
+
 function stateChange(evt) {
 	if(get('state') != "false") {
 		if(get('state') == "bid") {
@@ -105,12 +114,11 @@ function stateChange(evt) {
 			// take action based on whose turn
 			pid = parseInt(get('currentPlayer'));
 			if(pid == myIndex) {
-				$('#status').append('<li> It is your turn to bid: </li>');
-				bid = parseInt(prompt('Enter your bid value: '));
-				bids[myIndex] = bid;
-				pid = (pid + 1) % n;
-				pid = '' + pid;
-				delta({'statusChanged': 'false', 'currentPlayer': pid});
+				var wstr = '<li> It is your turn to bid. Enter your bid: ';
+				wstr += '<input type=\"text\" id=\"bidValue\" style=\"width: 40px;\" />';
+				wstr += '<button onclick=\"submitBid(this);\">Done!</button>';
+				wstr += '</li>';
+				$('#status').append(wstr);
 			} else {
 				$('#status').append('<li>Waiting for ' + players[pid]['name'] + ' to bid..</li>');
 			}
