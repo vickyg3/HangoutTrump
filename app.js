@@ -91,7 +91,7 @@ function stateChange(evt) {
 			if(get('stateChanged') == "true") {
 				// display the cards
 				var cards = JSON.parse(get('cards'));
-				for(var i = 0; i < players[myIndex].length; i++) {
+				for(var i = 0; i < cards[myIndex].length; i++) {
 			        $('p0c' + i).attr('src', '//raw.github.com/vickyg3/HangoutTrump/master/images/cards/' + cards[myIndex][i] + '.png');
 			        $('p0c' + i).attr('data-card', cards[myIndex][i]);
 				}
